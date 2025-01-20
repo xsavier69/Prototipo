@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trámites Municipales Cuenca</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo-container">
+                <img src="/escudo.jpg" alt="Escudo de Cuenca" class="logo-image">
+                <div class="logo">Municipio de Cuenca</div>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="tramites.html" class="nav-link">Trámites</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="#" class="nav-link" id="loginBtn">Iniciar Sesión</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="/Landscape.jpg" alt="Cuenca" class="hero-image">
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <h2>Trámites Municipales</h2>
+            <div class="services-grid">
+                <a href="licencias.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Licencias y Permisos</h3>
+                    <p>Gestione sus licencias comerciales y permisos de construcción.</p>
+                </a>
+                <a href="pagos.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Pagos y Tributos</h3>
+                    <p>Realice pagos de impuestos y servicios municipales.</p>
+                </a>
+                <a href="certificados.html" class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certificados</h3>
+                    <p>Solicite y descargue certificados digitales.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="chatbot">
+        <div class="chat-icon" id="chatIcon">
+            <i class="fas fa-comments"></i>
+        </div>
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <h3>Asistente Virtual</h3>
+            </div>
+            <div class="chat-messages" id="chatMessages"></div>
+            <div class="chat-input-container">
+                <textarea class="chat-input" id="chatInput" placeholder="Escribe tu mensaje..." rows="1"></textarea>
+                <button class="chat-send" id="sendMessage">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

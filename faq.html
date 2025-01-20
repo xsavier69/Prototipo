@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Municipio de Cuenca</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="faq.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header aquí -->
+
+    <div class="faq-header">
+        <div class="container">
+            <h1>Preguntas Frecuentes</h1>
+            <p>Encuentre respuestas a las preguntas más comunes sobre trámites municipales</p>
+        </div>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-category">
+            <h2 class="category-title">Trámites Generales</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    ¿Qué documentos necesito para iniciar un trámite?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    Para la mayoría de los trámites necesitará:
+                    <ul>
+                        <li>Cédula de identidad vigente</li>
+                        <li>Certificado de votación</li>
+                        <li>Comprobante de domicilio</li>
+                        <li>RUC/RISE (para trámites comerciales)</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Más preguntas frecuentes... -->
+        </div>
+
+        <div class="faq-category">
+            <h2 class="category-title">Licencias Comerciales</h2>
+            <!-- Preguntas sobre licencias -->
+        </div>
+
+        <div class="faq-category">
+            <h2 class="category-title">Pagos y Tributos</h2>
+            <!-- Preguntas sobre pagos -->
+        </div>
+    </div>
+
+    <!-- Chatbot aquí -->
+
+    <script src="script.js"></script>
+    <script>
+        // FAQ Functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = question.classList.contains('active');
+                
+                // Cerrar todas las respuestas
+                document.querySelectorAll('.faq-question').forEach(q => {
+                    q.classList.remove('active');
+                    q.nextElementSibling.classList.remove('active');
+                });
+
+                // Abrir/cerrar la respuesta actual
+                if (!isOpen) {
+                    question.classList.add('active');
+                    answer.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
